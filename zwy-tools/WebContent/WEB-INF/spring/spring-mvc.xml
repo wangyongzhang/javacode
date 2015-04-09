@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd   
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd   
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd   
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<!-- 启用spring mvc 注解 -->
+    <context:annotation-config />
+
+	<!-- 设置使用注解的类所在的jar包 -->
+	<context:component-scan base-package="com.Xcc.*" />
+	
+	<!-- 自动注册DefaultAnnotationHandlerMapping 与  AnnotationMethodHandlerAdapter @Controllers分发所必须的 -->
+	<mvc:annotation-driven />  
+	
+	<!-- 默认servlet处理器，当默认的没有使用的时候会自动去调用静态资源 -->
+	<mvc:default-servlet-handler/> 
+	
+	<!-- 文件上传表单的视图解析 -->	
+	<!--<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="defaultEncoding" value="UTF-8"></property>
+		<property name="maxUploadSize" value="52428800"></property>
+	</bean>
+	-->
+	<!-- 处理请求的映射，通过注解，把一个URL映射到Controller类的方法上 -->
+	<!-- 
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
+	 -->
+	 <!-- 实现spring的自动代理，当applicationContext读入所有的Bean以后，这个类将扫描
+		  上下文，寻找所有的Advistor,将这些Advistor应用到所有符合切入的Bean中 -->
+	<!-- 
+	<bean
+		class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator">
+		<property name="proxyTargetClass" value="true" />
+	</bean>
+	 -->
+	<!-- 启动AspectJ支持 -->  
+    <aop:aspectj-autoproxy />
+    <!-- 内部资源视图解析器 -->  
+    <!-- 
+    <bean  
+        class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
+        <property name="viewClass"  
+            value="org.springframework.web.servlet.view.JstlView" />  
+        <property name="prefix" value="/WEB-INF/" />  
+        <property name="suffix" value=".html" />  
+    </bean> 
+     -->
+</beans>

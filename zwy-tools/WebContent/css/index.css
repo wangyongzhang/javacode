@@ -1,0 +1,48 @@
+body {
+	margin:0px;
+	text-align:center;
+	background:#FFF;
+}
+
+#container {
+	width:100%
+}
+#header {
+	width:800px;
+	margin:0 auto;
+	height:80px;
+	background:#5F9F9F;
+	font-size:30px;
+}
+#navbar {
+	width:800px;
+	margin:0 auto;
+	height:20px;
+	background:#5F9F90;
+	font-size:14px;
+}
+#pageBody {
+	width:800px;
+	margin:0 auto;
+	height:500px;
+	background:#C0D9D9
+}
+#sideBar{
+	width:20%;
+	height:100%;
+	float:left;
+	background:#D9D9F3;
+}
+#mainBody{
+	width:80%;
+	height:100%;
+	float:right;
+}
+#footer {
+	width:800px;
+	margin:0 auto;
+	height:50px;
+	background:#5F9F9F
+}
+
+

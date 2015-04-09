@@ -1,0 +1,15 @@
+body {
+	font:12px Tahoma;
+}
+
+li{ 
+	list-style:none; 
+	border:0;text-align:left; 
+	padding:0; 
+	margin:0;
+	line-height:20px; 
+	vertical-align:middle;
+}
+li img{
+	vertical-align:middle;
+}

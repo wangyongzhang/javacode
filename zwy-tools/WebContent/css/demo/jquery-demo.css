@@ -1,0 +1,17 @@
+.moduleDiv{
+	border:solid 2px #ccc;
+	margin:5px;
+}
+div.out{
+	width:40%;
+	height:120px;
+	margin:0 15px;
+	background-color:#D6EDFC;
+	float:left;
+}
+div.in{
+	width:60%;
+	height:12opx;
+	background-color:#FFCC00;
+	margin:10px auto;
+}
