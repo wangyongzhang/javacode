@@ -14,7 +14,7 @@ public class TestController {
 	
 	@RequestMapping(value = "/test")
 	public String test(){
-		testService.PropertityTest();
+		testService.myBatisTest();
 		return "index.html";
 	}
 }

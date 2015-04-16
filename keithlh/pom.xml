@@ -6,6 +6,11 @@
   
   <properties>
   	<spring.version>3.2.2.RELEASE</spring.version>
+  	<mybatis.version>3.2.7</mybatis.version>
+	<mybatis.spring.version>1.2.2</mybatis.spring.version>
+	<mysql.version>5.1.12</mysql.version>
+	<cglib.version>3.0</cglib.version>
+	<c3p0.version>0.9.1.2</c3p0.version>
   </properties>
   
   <dependencies>
@@ -34,6 +39,35 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
 			<version>${spring.version}</version>
+		</dependency>
+		
+		<!-- myBatis framework -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>${mybatis.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>${mybatis.spring.version}</version>
+		</dependency>
+
+		<!-- mysql -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib</artifactId>
+			<version>${cglib.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>c3p0</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>${c3p0.version}</version>
 		</dependency>
 	</dependencies>
 </project>

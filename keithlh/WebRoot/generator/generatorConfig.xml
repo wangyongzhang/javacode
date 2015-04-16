@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<!-- maven commend like: -->
+<!--Dmybatis.generator.overwrite=true mybatis-generator:generate -->
+<generatorConfiguration>
+	<classPathEntry location="D:/mysql/mysql-connector-java/5.1.12/mysql-connector-java-5.1.12.jar" />
+	<context id="HEADING" targetRuntime="MyBatis3">
+		<!-- <plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" /> -->
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+		<plugin type="org.mybatis.generator.plugins.CaseInsensitiveLikePlugin" />
+		<commentGenerator>
+			<property name="suppressAllComments" value="false" />
+		</commentGenerator>
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://172.16.3.78:3306/xinyunlian_pro"
+			userId="xinyunlian" password="123456">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.keithlh.test.domain"
+			targetProject="keithlh/src/main/java">
+			<property name="enableSubPackages" value="false" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="mybatis.test"
+			targetProject="keithlh/src/main/resources">
+			<property name="enableSubPackages" value="false" />
+		</sqlMapGenerator>
+
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.keithlh.test.dao"
+			targetProject="keithlh/src/main/java">
+			<property name="enableSubPackages" value="false" />
+		</javaClientGenerator>
+
+
+		<table tableName="xinyunlian_admin" domainObjectName="Admin"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" />
+		<!-- <table tableName="logistic_outstore_item" domainObjectName="OutstoreItem"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" />
+		<table tableName="logistic_instore_order" domainObjectName="InstoreOrder"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" />
+		<table tableName="logistic_instore_item" domainObjectName="InstoreItem"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" />
+		<table tableName="xinyunlian_order_item" domainObjectName="OrderItem"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" />
+		<table tableName="xinyunlian_purchase_product" domainObjectName="PurchaseProduct"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" />
+		<table tableName="xinyunlian_receipt" domainObjectName="Receipt"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" />
+		<table tableName="xinyunlian_receipt_detail" domainObjectName="ReceiptDetail"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" /> -->
+	</context>
+</generatorConfiguration>

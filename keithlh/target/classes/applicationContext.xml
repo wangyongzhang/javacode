@@ -21,4 +21,5 @@
 	<context:property-placeholder location="classpath*:test.properties"
 		ignore-resource-not-found="true" ignore-unresolvable="true" />
 	
+	<import resource="classpath*:applicationContext-persistence.xml" />
 </beans>
