@@ -1,0 +1,30 @@
+<configuration>
+	<contextName>keithlh</contextName>
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%level %logger{55} - %msg%n</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+	</appender>
+	<appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>../logs/keithlh.log</File>
+		<encoder>
+			<pattern>%d{MMdd.HHmmss} [%-22t] %-5p L:%-3L %-22c{0} - %m%n</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>../logs/keithlh.%d{yyyyMMddHH}.log</fileNamePattern>
+		</rollingPolicy>
+		<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<MaxFileSize>20MB</MaxFileSize>
+		</triggeringPolicy>
+	</appender>
+	<root level="debug">
+		<appender-ref ref="console" />
+	</root>
+	<logger name="com.keithlh" level="debug">
+		<appender-ref ref="file" />
+	</logger>
+	<logger name="java.sql.Statement" level="DEBUG" />
+</configuration>
